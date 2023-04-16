@@ -1,5 +1,5 @@
 :: StoryTitle
-Concerts Between Explosions
+Concert Between Explosions
 
 
 :: StoryData
@@ -679,7 +679,7 @@ setup.backThirty = () => {
 
 
 :: landing [nobr]
-<<set $title to "Concerts Between Explosions">>
+<<set $title to "Concert Between Explosions">>
 <<set $openOrClosed to "closed">>
 <<set $prevpass to "landing">>
 <<set $passage to "landing">>
@@ -1014,7 +1014,7 @@ It was like a light switch that went on.
 <br/>
  <h3>Bullet Words and Tank Songs</h3>
  <br/>
-    <a href="https://bullet-words-tank-songs.netlify.app/">
+    <a href="https://fr-bullet-words-and-tank-songs.netlify.app/">
 <button>Start</button></a>
 
 
