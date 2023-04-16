@@ -406,7 +406,7 @@ setup.backThirty = () => {
  
   <div class="nav-wrapper">
     <div class="nav-item">
-    <div id="mount"> <span class="comment">Press the image <br> to see it transform</span></div>
+    <div id="mount"> <span class="comment">Press the photo <br> to see it transform</span></div>
     </div></div>
     <div class="nav-wrapper">
     <div class="nav-item">
@@ -839,7 +839,7 @@ Because before this, people were in a kind of anabiotic state. But this concert,
 It was like a light switch that went on.
 
 :: instnar3 [nobr]
-<<set $prevpass to "premiere">>
+<<set $prevpass to "concert">>
 <<set $passage to "instnar3">>
   <<set $nextpass to "AR1">>
 <<set $showMap to true>>
@@ -922,7 +922,7 @@ It was like a light switch that went on.
 
 
 :: kharkivfest[nobr]
-<<set $prevpass to "instnar5">>
+<<set $prevpass to "instnar4">>
 <<set $passage to "kharkivfest">>
 <<set $nextpass to "end">>
 <<set $showMap to true>>
