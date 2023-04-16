@@ -1003,6 +1003,7 @@ It was like a light switch that went on.
 <<set $showBackwards to true>>
 <<set $showForwards to false>>
 <<set $showCaptionsIcon to false>>
+<<audio ":all" stop>>
 /* Church  */
 
 <main class="end">
