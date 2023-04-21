@@ -1,3 +1,4 @@
-#Our Biggest Premiere Yet
+# to compile twee
 
-https://fr-biggest-premiere-yet.netlify.app/
+source ~/.bash_profile &&
+tweego -o index.html template.tw -w
