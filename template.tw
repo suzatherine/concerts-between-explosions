@@ -309,7 +309,7 @@ setup.backThirty = () => {
   <<if $sendOn is true>>
  <div class="nav-wrapper" id="forIcon">
     <div class="nav-item " >
-        <a href="https://fr-our-place-in-our-city.netlify.app/">
+        <a href="https://fr-bullet-words-and-tank-songs.netlify.app/">
 <img src="assets/img/for.png"></a>
     </div>
   </div>
@@ -1247,7 +1247,7 @@ The Revolution of Dignity taught us as a civic society how to mobilise. And if w
   <<timed 30s>>
 <<replace "#headerinstmount">>
     <p class="comment"> Are you outside Liverpool Parish Church?  
-    <a href="https://fr-our-place-in-our-city.netlify.app/">
+    <a href="https://fr-bullet-words-and-tank-songs.netlify.app/">
 <button>I'm here</button></a>
     </p>
     <</replace>>
@@ -1267,41 +1267,6 @@ The Concert Between Explosions created by Kharkiv Music Fest, lasted for 40 minu
 The music included many well know Ukrainian songs...
 
 
-
-
-
-
-
-
-:: end [nobr]
-<<set $prevpass to "kharkivfest">>
-<<set $passage to "end">>
-<<set $nextpass to "end">>
-<<set $showMap to false>>
-<<set $showAudio to false>>
-<<set $showReplay to true>>
-<<set $showBackwards to true>>
-<<set $showForwards to false>>
-<<set $showCaptionsIcon to false>>
-/* Church  */
-
-<main class="end">
-<div id="audio"></div>
-<div id="map" class="hide">$map</div>
-<div id="mount"></div>
-<h2>Liverpool Parish Church</h2>
-<p>Would you like to go on another journey?</p>
-<br/>
- <h3>Bullet Words and Tank Songs</h3>
- <br/>
-    <a href="https://bullet-words-tank-songs.netlify.app/">
-<button>Start</button></a>
-
-
-
-/* <p>Or back to the main <a href="https://liv-ukr-main.netlify.app/map">map</a></p> */
-</main>
-<<include "footer">>
 
 
 
