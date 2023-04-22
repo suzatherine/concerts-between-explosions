@@ -15,8 +15,8 @@ Concerts Between Explosions
 :: Story Stylesheet [stylesheet]
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
 
-@import url("./styles/generics.css");
-@import url("./styles/styles.css");
+@import url("styles/generics.css");
+@import url("styles/styles.css");
 
 
 
@@ -216,14 +216,14 @@ setup.backThirty = () => {
 
 
 :: StoryInit {"position":"100,100","size":"100,100"}
-<<cacheaudio "51" "./../assets/audio/51.mp3">>
-<<cacheaudio "52" "./../assets/audio/52.mp3">>
-<<cacheaudio "53" "./../assets/audio/53V2.mp3">>
-<<cacheaudio "54" "./../assets/audio/54.mp3">>
-<<cacheaudio "55.5" "./../assets/audio/55.5.mp3">>
-<<cacheaudio "55" "./../assets/audio/55.mp3">>
-<<cacheaudio "56.5" "./../assets/audio/56.5V2.mp3">>
-<<cacheaudio "56" "./../assets/audio/56V2.mp3">>
+<<cacheaudio "51" "assets/audio/51.mp3">>
+<<cacheaudio "52" "assets/audio/52.mp3">>
+<<cacheaudio "53" "assets/audio/53V2.mp3">>
+<<cacheaudio "54" "assets/audio/54.mp3">>
+<<cacheaudio "55.5" "assets/audio/55.5.mp3">>
+<<cacheaudio "55" "assets/audio/55.mp3">>
+<<cacheaudio "56.5" "assets/audio/56.5V2.mp3">>
+<<cacheaudio "56" "assets/audio/56V2.mp3">>
 <<waitforaudio>>
 
 
@@ -309,7 +309,7 @@ setup.backThirty = () => {
   <<if $sendOn is true>>
  <div class="nav-wrapper" id="forIcon">
     <div class="nav-item " >
-        <a href="https://fr-bullet-words-and-tank-songs.netlify.app/">
+        <a href="https://withfireandrageliverpool.com/bullet">
 <img src="assets/img/for.png"></a>
     </div>
   </div>
@@ -670,14 +670,43 @@ setup.backThirty = () => {
 <main class="" id="">
 
 <div class="poster-wrapper" id="poster">
-   <img class="poster" src="./../assets/img/concerts-title.jpeg"/>
+   <img class="poster" src="assets/img/concerts-title.jpeg"/>
  </div>
  <div class="menu-wrapper">
     <<button "Keep going">><<goto $nextpass>><</button>>
      <<button "I'm joining the audio tour here">><<goto "framing">><</button>>
-     <a href="www.withfireandrage.com"><button>Leave the Tour</button></a>
+     <<button "Leave">><<goto "leave">><</button>>
 </div>
 </main>
+
+:: leave [nobr]
+<<set $prevpass to "beginning">>
+<<set $passage to "leave">>
+<<set $nextpass to "leave">>
+<<set $transcript to false>>
+<<set $playToggle to false>>
+<<set $captionToggle to false>>
+<<set $showForwards to false>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to false>>
+<<set $showMap to false>>
+<audio id="audio" autoplay >
+  <source src="https://withfireandrageliverpool.com/audio/ONB/CreditsAltV1.mp3">
+</audio>
+<main class="instructions" id="">
+<div id="mount"></div>
+<p>Thank you for joining me today</p>
+
+<p>With Fire And Rage is created from the testimonies, art, photography, and music of artists across Ukraine </p>
+<p>I invite you to discover their work </p>
+<p>Listen to more online</p>
+<p>Or visit other locations another day</p>
+
+<a href="https://www.withfireandrage.com"  rel="noreferrer" style="color:var(--color-yellow) "><p>withfireandrage.com</p></a>
+
+</main>
+<<include "footer">>
+
 
 
 :: framing [nobr]  {"position":"700,175","size":"100,100"}
@@ -691,6 +720,9 @@ setup.backThirty = () => {
 <<set $showBackwards to true>>
 <<set $showCaptionsIcon to false>>
 <<set $showMap to false>>
+<audio id="audio" autoplay >
+  <source src="https://withfireandrageliverpool.com/audio/ONB/onboardingp1.mp3">
+</audio>
 
 <main class="instructions" id="">
 <div id="mount"></div>
@@ -731,7 +763,9 @@ setup.backThirty = () => {
 <<set $showForwards to true>>
 <<set $showBackwards to true>>
 <<set $showCaptionsIcon to false>>
-
+<audio id="audio" autoplay >
+  <source src="https://withfireandrageliverpool.com/audio/ONB/onboardingp2.mp3">
+</audio>
 
 <<set $map = setup.generateViewMap({originLat: 53.40867627790632, originLong:-2.9893463897100947, originName: "Moorfields Train Station Liverpool"})>>
 
@@ -789,8 +823,10 @@ setup.backThirty = () => {
 <<set $showForwards to true>>
 <<set $showBackwards to true>>
 <<set $showCaptionsIcon to false>>
+<audio id="audio" autoplay >
+  <source src="https://withfireandrageliverpool.com/audio/ONB/onboardingp3.mp3">
+</audio>
 
-<div id="audio"></div>
 /* <<include "header">> */
 <main class="instructions">
 <h2>Onboarding</h2>
@@ -853,8 +889,9 @@ setup.backThirty = () => {
 <<set $showForwards to true>>
 <<set $showBackwards to true>>
 <<set $showCaptionsIcon to false>>
-
-<div id="audio"></div>
+<audio id="audio" autoplay >
+  <source src="https://withfireandrageliverpool.com/audio/ONB/onboardingp4.mp3">
+</audio>
 /* <<include "header">> */
 <main class="instructions">
 <h2>Onboarding</h2>
@@ -1008,11 +1045,11 @@ setup.backThirty = () => {
 <main class="story" id="storyContainer">
 <<audio ":all" stop>><<audio "53" play>>
 <audio id="audio" >
-  <source src="https://withfireandrageliverpool.com/audio/CE/PD7V1.mp3">
+  <source src="https://withfireandrageliverpool.com/audio/CE/concertsv2.mp3">
   <track kind="captions" srclang="en" label="English captions" id="captrack" default>
 </audio>
 <div class="poster-wrapper" id="poster">
-   <img class="poster" src="./../assets/img/concerts.jpeg"/>
+   <img class="poster" src="assets/img/concerts.jpeg"/>
  </div>
 
 <div id="transcript"></div>
@@ -1048,40 +1085,60 @@ setup.backThirty = () => {
 
 <h2>Transcript</h2>
 
-NARRATOR:
+NARRATION BY VERONIKA SKLIAROVA:
 
-What do you associate your local train station with? Going to and from work? Travelling to meet up with friends? Or maybe going to watch your local football club at the weekend?
 In Kharkiv, hundreds of thousands of people lived underground in the Metro station, for over half a year.
+
 I managed to leave the city with my children, but we were only one step away from sleeping on the station’s marble floor, in winter. 
+
 Do you remember this cartoon Teenage Mutant Ninja Turtles? And how they lived in the sewers? It was like this.
+
 Some kids didn’t see the sun in the sky for weeks
-But it was also well organised. With spaces for food, water, charging mobile phones and medicine. 
-The Revolution of Dignity taught us as a civic society how to mobilise. And if we didn't have this… I'm sorry… but lets say rehearsal, we would have been in a much worse place.
+
 But how to introduce the music concerts that Julia Nikolajevska and her colleagues at Kharkiv Music Fest created in the metro station?
+
 The bravery of those artists cannot be measured.... 
 
 
-JULIA NIKOLAJEVSKA:
+TESTIMONY OF JULIA NIKOLAJEVSKA:
 
 It was clear that we couldn’t go ahead with Kharkiv Music Festival as originally planned in March. It was obvious.
+
 But for us as organizers, we had a very big will that we must create some kind of music event.
+
 We saw a big need in the people. And really this concert was made to unite people because they were in a very bad shape.
+
 The safest and only place we could actually do a concert in that period was the Metro Station. 
+
 And we choose to call it the “Concert Between Explosions” because it was literally like this. Huge explosions, before the concert, during the concert and after.
+
 It was obvious that the only musicians who could participate were those who stayed in Kharkiv. But it was more complicated than that. For a lot of people, fear is paralysing and it was hard to predict who would be able to play in the moment.
+
 We found five musicians, and it was enough because it made up a string Quintet - Stanislav Kucherenko and Olha Pyshchyta on the violin, Tetiana Zhuk the viola, Denys Karachevtsev the cello and Serhii Dikariev the double bass.
+
 One young composer Volodymyr Bohatyrov made the musical scores, creating adaptions for the five musicians. And we chose famous Ukrainian songs, where all people know the melodies.
+
 At the beginning of the concert The President of Kharkiv Music Fest announced, “Despite the war, we are starting our festival.”
+
 Our Mayor and the Head of the Kharkiv Regional Military Administration were both there and I thought they would leave after five minutes, but they stayed for the whole concert. It was very important for them, and for the audience. It was actually the first cultural event in the city.
+
 Before that it was total suffering and pain…Horrible, terrible situations. 
+
 It was the first event to remind us of peace and the life that was before.
+
 During the concert, it was visible how people transformed. You can see these changes in them, how they started to smile. 
-When musicians started to play, Nich Yaka Misyachna What A Moonlit Night… very famous, very famous… She sings a couple of lines  people start to sing this song together.
+
+When musicians started to play, Nich Yaka Misyachna What A Moonlit Night… very famous, very famous… (Julia sings a couple of lines) people start to sing this song together.
+
 Even if they didn't have a voice for singing, they joined in.
 In the end, the team performed “Praying for Ukraine”. It's 19th century, quite well known melody, with the words God save Ukraine and it was a very emotional end to the concert. 
+
 This concert inspired a lot of people to start doing different projects - collaborations and creations - working together on music festivals, art exhibitions, drawing projects with kids who continued to live in the Metro Station.
+
 Because before this, people were in a kind of anabiotic state. But this concert, inspire them to begin again, to renew cultural activities. 
+
 It was like a light switch that went on.
+
 
 :: instnar3 [nobr]
 <<set $prevpass to "premiere">>
@@ -1132,10 +1189,10 @@ It was like a light switch that went on.
 
   <div class="ar-imgs-container one" id="ARContainer">
     <div class="hidden-img-wrapper touch transparent" id="reveal" >
-        <img src="./assets/img/gifs/moorfields.gif" class="">
+        <img src="assets/img/gifs/moorfields.gif" class="">
       </div>
     <div class="ar-img-wrapper touch bottom" id="initial" >
-      <img src="./assets/img/moorfields.jpeg" class="">
+      <img src="assets/img/moorfields.jpeg" class="">
       </div>
   </div>
 
@@ -1152,6 +1209,7 @@ The Kharkiv Metro Station, sheltered hundreds of thousands of residents, for man
 Despite the situation, it was well organised. With spaces for food, water, charging mobile phones and medicine. 
 
 The Revolution of Dignity taught us as a civic society how to mobilise. And if we didn't have this… I'm sorry… but let’s say rehearsal, we would have been in a much worse place.
+
 
 
 :: instnar4 [nobr]
@@ -1201,13 +1259,13 @@ The Revolution of Dignity taught us as a civic society how to mobilise. And if w
 <<include "headerstory">>
 <main class="story" id="storyContainer" >
 <audio id="audio" >
-  <source src="https://www.dropbox.com/s/g6b51641404dfj1/08.%20WALK%208%20V1.mp3?raw=1">
+  <source src="https://withfireandrageliverpool.com/audio/CE/kharkivwalkv2.mp3">
   <track kind="captions" srclang="en" label="English captions" id="captrack" default>
 </audio>
 
 <div id="map" class="">$map</div>
 /* <div class="poster-wrapper hide" id="poster">
-   <img class="poster" src="./../assets/img/concert.png"/>
+   <img class="poster" src="assets/img/concert.png"/>
  </div> */
 <div class="caution" ><img src="assets/img/caution.png"><p>Take care crossing roads </p></div>
 <div id="transcript"></div>
@@ -1228,7 +1286,7 @@ The Revolution of Dignity taught us as a civic society how to mobilise. And if w
   <<timed 4s>>
       <<replace "#headerinstmount">>
     <p class="comment"> Are you outside Liverpool Parish Church?  
-    <a href="https://fr-bullet-words-and-tank-songs.netlify.app/">
+    <a href="https://withfireandrageliverpool.com/bullet">
 <button>I'm here</button></a>
     </p>
     <</replace>>
@@ -1247,7 +1305,7 @@ The Revolution of Dignity taught us as a civic society how to mobilise. And if w
   <<timed 30s>>
 <<replace "#headerinstmount">>
     <p class="comment"> Are you outside Liverpool Parish Church?  
-    <a href="https://fr-bullet-words-and-tank-songs.netlify.app/">
+    <a href="https://withfireandrageliverpool.com/bullet">
 <button>I'm here</button></a>
     </p>
     <</replace>>
@@ -1262,9 +1320,14 @@ The Revolution of Dignity taught us as a civic society how to mobilise. And if w
 
 
 :: kharkivfesttranscript
+NARRATION BY VERONIKA SKLIAROVA:
+
 The Concert Between Explosions created by Kharkiv Music Fest, lasted for 40 minutes as rockets landed above the underground metro station.
 
-The music included many well know Ukrainian songs...
+The music included many well know Ukrainian songs… 
+
+(Classical music from Kharkiv Music Fest, Concert Between Explosions)
+
 
 
 
