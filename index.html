@@ -133,7 +133,7 @@ iFrame.classList.add("map")
 iFrame.setAttribute("loading", "lazy")
 iFrame.setAttribute("referrerpolicy", "no-referrer-when-downgrade")
 // iFrame.setAttribute("allowfullscreen")
-iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyCSbMwR1cUMfnIAh0Pxi0F1N16kvDGZXGU&center=${origin[0]},${origin[1]}&zoom=18&origin=${origin[0]},${origin[1]}&destination=${dest[0]},${dest[1]}&waypoints=${wayp}&mode=walking`)
+iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyB7uJuBjDcK-tb0aJpTjaKA1ZNLWhEPN5M&center=${origin[0]},${origin[1]}&zoom=18&origin=${origin[0]},${origin[1]}&destination=${dest[0]},${dest[1]}&waypoints=${wayp}&mode=walking`)
 const mount = document.getElementById("mapMount")
 console.log(iFrame)
 return iFrame
@@ -770,7 +770,7 @@ setup.backThirty = () => {
 &lt;&lt;/append&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 8s&gt;&gt;&lt;&lt;append &quot;#mount&quot;&gt;&gt;
-&lt;p&gt;You can move forward via a button like&lt;&lt;button &quot;This&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt; 
+&lt;p&gt;To move forward press a button like &lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt; 
 &lt;&lt;/append&gt;&gt;&lt;&lt;/timed&gt;&gt;
  
 &lt;/main&gt;
@@ -787,7 +787,7 @@ setup.backThirty = () => {
   &lt;source src=&quot;https://withfireandrageliverpool.com/audio/ONB/onboardingp2.mp3&quot;&gt;
 &lt;/audio&gt;
 
-&lt;&lt;set $map = setup.generateViewMap({originLat: 53.40867627790632, originLong:-2.9893463897100947, originName: &quot;Moorfields Train Station Liverpool&quot;})&gt;&gt;
+&lt;&lt;set $map = setup.generateViewMap({originLat: 53.40822788686569, originLong:-2.992732594830228, originName: &quot;4 Old Hall Street Liverpool L3 9RQ&quot;})&gt;&gt;
 
 
 &lt;div id=&quot;audio&quot;&gt;&lt;/div&gt;
@@ -908,7 +908,7 @@ setup.backThirty = () => {
 &lt;main class=&quot;instructions&quot;&gt;
 &lt;h2&gt;Onboarding&lt;/h2&gt;
 &lt;div id=&quot;map&quot; class=&quot;hide&quot;&gt;$map&lt;/div&gt;
-&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;mount&quot; class=&quot;onboarding&quot;&gt;&lt;/div&gt;
 &lt;&lt;timed 0.1s&gt;&gt;
   &lt;&lt;append &quot;#mount&quot;&gt;&gt;
     &lt;p&gt;At every location, I will suggest places to sit, to lean, to shelter&lt;/p&gt;
@@ -947,12 +947,12 @@ setup.backThirty = () => {
     &lt;span&gt;Step-free access &lt;/span&gt;
     &lt;/div&gt;
       &lt;div class=&quot;multiple-icon-item&quot;&gt;
-      &lt;img src=&quot;assets/img/wifi.png&quot; &gt;
+      &lt;img src=&quot;assets/img/charge.png&quot; &gt;
     &lt;span&gt;Phone Charger  &lt;/span&gt;
     &lt;/div&gt;
       &lt;div class=&quot;multiple-icon-item&quot;&gt;
       &lt;img src=&quot;assets/img/caution.png&quot; &gt;
-    &lt;span&gt;Caution! take care crossing roads&lt;/span&gt;
+    &lt;span&gt;Caution!&lt;/span&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 
@@ -977,7 +977,7 @@ setup.backThirty = () => {
 &lt;&lt;set $showBackwards to true&gt;&gt;
 &lt;&lt;set $showCaptionsIcon to false&gt;&gt;
 &lt;&lt;set $food to false&gt;&gt;
-&lt;&lt;set $map = setup.generateViewMap({originLat: 53.40867627790632, originLong:-2.9893463897100947, originName: &quot;Moorfields Train Station Liverpool&quot;})&gt;&gt;
+&lt;&lt;set $map = setup.generateViewMap({originLat: 53.40822788686569, originLong:-2.992732594830228, originName: &quot;4 Old Hall Street Liverpool L3 9RQ&quot;})&gt;&gt;
 &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;51&quot; play&gt;&gt;
 &lt;&lt;include &quot;header&quot;&gt;&gt;
 &lt;div class=&quot;comp-warning&quot;&gt;Best to experience on a phone&lt;/div&gt;
@@ -1130,7 +1130,7 @@ This concert inspired a lot of people to start doing different projects - collab
 
 Because before this, people were in a kind of anabiotic state. But this concert, inspire them to begin again, to renew cultural activities. 
 
-It was like a light switch that went on.</tw-passagedata><tw-passagedata pid="22" name="instnar3" tags="nobr" position="225,350" size="100,100">&lt;&lt;set $prevpass to &quot;premiere&quot;&gt;&gt;
+It was like a light switch that went on.</tw-passagedata><tw-passagedata pid="22" name="instnar3" tags="nobr" position="225,350" size="100,100">&lt;&lt;set $prevpass to &quot;concert&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;instnar3&quot;&gt;&gt;
   &lt;&lt;set $nextpass to &quot;AR1&quot;&gt;&gt;
 &lt;&lt;set $showMap to true&gt;&gt;
@@ -1139,7 +1139,7 @@ It was like a light switch that went on.</tw-passagedata><tw-passagedata pid="22
 &lt;&lt;set $showBackwards to true&gt;&gt;
 &lt;&lt;set $showForwards to true&gt;&gt;
 &lt;&lt;set $showCaptionsIcon to false&gt;&gt;
-&lt;&lt;set $map = setup.generateViewMap({originLat: 53.40867627790632, originLong:-2.9893463897100947, originName: &quot;Moorfields Train Station, Old Hall Street&quot;})&gt;&gt;
+&lt;&lt;set $map = setup.generateViewMap({originLat: 53.40822788686569, originLong:-2.992732594830228, originName: &quot;4 Old Hall Street Liverpool L3 9RQ&quot;})&gt;&gt;
 &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;55&quot; play&gt;&gt;
 &lt;div id=&quot;audio&quot;&gt;&lt;/div&gt;
 
@@ -1200,8 +1200,10 @@ The Revolution of Dignity taught us as a civic society how to mobilise. And if w
 &lt;&lt;set $showForwards to true&gt;&gt;
 &lt;&lt;set $showCaptionsIcon to false&gt;&gt;
  &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;56&quot; play&gt;&gt;
-&lt;&lt;set $map = setup.generateDirectionsMap({originName: &quot;Moorfields Train Station Old hall Street&quot;, originLat: 53.40864430042216, originLong:-2.9893463897100947}, &quot;Liverpool Parish Church&quot;)&gt;&gt;
+&lt;&lt;set $map = setup.generateDirectionsMap({originName: &quot;4 Old Hall Street Liverpool L3 9RQ&quot;, originLat: 53.40822788686569, originLong:-2.992732594830228}, &quot;Liverpool Parish Church&quot;)&gt;&gt;
 &lt;div id=&quot;audio&quot;&gt;&lt;/div&gt;
+
+
 
 &lt;main class=&quot;instructions&quot;&gt;
 &lt;div id=&quot;map&quot; class=&quot;hide&quot;&gt;$map&lt;/div&gt;
@@ -1225,8 +1227,8 @@ The Revolution of Dignity taught us as a civic society how to mobilise. And if w
 &lt;&lt;set $transcriptname to  &quot;kharkivfesttranscript&quot;&gt;&gt;
 &lt;&lt;set $sendOn to true&gt;&gt;
  &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;56.5&quot; play&gt;&gt;
-/* Everyman to 1931  */
-&lt;&lt;set $map = setup.generateDirectionsMap({originName: &quot;Moorfields Train Station Old hall Street&quot;, originLat: 53.40864430042216, originLong:-2.9893463897100947}, &quot;Liverpool Parish Church&quot;)&gt;&gt;
+
+&lt;&lt;set $map = setup.generateDirectionsMap({originName: &quot;4 Old Hall Street Liverpool L3 9RQ&quot;, originLat: 53.40822788686569, originLong:-2.992732594830228}, &quot;Liverpool Parish Church&quot;)&gt;&gt;
 &lt;&lt;include &quot;headerstory&quot;&gt;&gt;
 &lt;main class=&quot;story&quot; id=&quot;storyContainer&quot; &gt;
 &lt;audio id=&quot;audio&quot; &gt;

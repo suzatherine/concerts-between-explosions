@@ -53,7 +53,7 @@ iFrame.classList.add("map")
 iFrame.setAttribute("loading", "lazy")
 iFrame.setAttribute("referrerpolicy", "no-referrer-when-downgrade")
 // iFrame.setAttribute("allowfullscreen")
-iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyCSbMwR1cUMfnIAh0Pxi0F1N16kvDGZXGU&center=${origin[0]},${origin[1]}&zoom=18&origin=${origin[0]},${origin[1]}&destination=${dest[0]},${dest[1]}&waypoints=${wayp}&mode=walking`)
+iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyB7uJuBjDcK-tb0aJpTjaKA1ZNLWhEPN5M&center=${origin[0]},${origin[1]}&zoom=18&origin=${origin[0]},${origin[1]}&destination=${dest[0]},${dest[1]}&waypoints=${wayp}&mode=walking`)
 const mount = document.getElementById("mapMount")
 console.log(iFrame)
 return iFrame
@@ -745,7 +745,7 @@ setup.backThirty = () => {
 <</append>><</timed>>
 
 <<timed 8s>><<append "#mount">>
-<p>You can move forward via a button like<<button "This">><<goto $nextpass>><</button>></p> 
+<p>To move forward press a button like <<button "Next">><<goto $nextpass>><</button>></p> 
 <</append>><</timed>>
  
 </main>
@@ -767,7 +767,7 @@ setup.backThirty = () => {
   <source src="https://withfireandrageliverpool.com/audio/ONB/onboardingp2.mp3">
 </audio>
 
-<<set $map = setup.generateViewMap({originLat: 53.40867627790632, originLong:-2.9893463897100947, originName: "Moorfields Train Station Liverpool"})>>
+<<set $map = setup.generateViewMap({originLat: 53.40822788686569, originLong:-2.992732594830228, originName: "4 Old Hall Street Liverpool L3 9RQ"})>>
 
 
 <div id="audio"></div>
@@ -896,7 +896,7 @@ setup.backThirty = () => {
 <main class="instructions">
 <h2>Onboarding</h2>
 <div id="map" class="hide">$map</div>
-<div id="mount"></div>
+<div id="mount" class="onboarding"></div>
 <<timed 0.1s>>
   <<append "#mount">>
     <p>At every location, I will suggest places to sit, to lean, to shelter</p>
@@ -935,12 +935,12 @@ setup.backThirty = () => {
     <span>Step-free access </span>
     </div>
       <div class="multiple-icon-item">
-      <img src="assets/img/wifi.png" >
+      <img src="assets/img/charge.png" >
     <span>Phone Charger  </span>
     </div>
       <div class="multiple-icon-item">
       <img src="assets/img/caution.png" >
-    <span>Caution! take care crossing roads</span>
+    <span>Caution!</span>
     </div>
 </div>
 
@@ -969,7 +969,7 @@ setup.backThirty = () => {
 <<set $showBackwards to true>>
 <<set $showCaptionsIcon to false>>
 <<set $food to false>>
-<<set $map = setup.generateViewMap({originLat: 53.40867627790632, originLong:-2.9893463897100947, originName: "Moorfields Train Station Liverpool"})>>
+<<set $map = setup.generateViewMap({originLat: 53.40822788686569, originLong:-2.992732594830228, originName: "4 Old Hall Street Liverpool L3 9RQ"})>>
 <<audio ":all" stop>><<audio "51" play>>
 <<include "header">>
 <div class="comp-warning">Best to experience on a phone</div>
@@ -1141,7 +1141,7 @@ It was like a light switch that went on.
 
 
 :: instnar3 [nobr]
-<<set $prevpass to "premiere">>
+<<set $prevpass to "concert">>
 <<set $passage to "instnar3">>
   <<set $nextpass to "AR1">>
 <<set $showMap to true>>
@@ -1150,7 +1150,7 @@ It was like a light switch that went on.
 <<set $showBackwards to true>>
 <<set $showForwards to true>>
 <<set $showCaptionsIcon to false>>
-<<set $map = setup.generateViewMap({originLat: 53.40867627790632, originLong:-2.9893463897100947, originName: "Moorfields Train Station, Old Hall Street"})>>
+<<set $map = setup.generateViewMap({originLat: 53.40822788686569, originLong:-2.992732594830228, originName: "4 Old Hall Street Liverpool L3 9RQ"})>>
 <<audio ":all" stop>><<audio "55" play>>
 <div id="audio"></div>
 
@@ -1223,8 +1223,10 @@ The Revolution of Dignity taught us as a civic society how to mobilise. And if w
 <<set $showForwards to true>>
 <<set $showCaptionsIcon to false>>
  <<audio ":all" stop>><<audio "56" play>>
-<<set $map = setup.generateDirectionsMap({originName: "Moorfields Train Station Old hall Street", originLat: 53.40864430042216, originLong:-2.9893463897100947}, "Liverpool Parish Church")>>
+<<set $map = setup.generateDirectionsMap({originName: "4 Old Hall Street Liverpool L3 9RQ", originLat: 53.40822788686569, originLong:-2.992732594830228}, "Liverpool Parish Church")>>
 <div id="audio"></div>
+
+
 
 <main class="instructions">
 <div id="map" class="hide">$map</div>
@@ -1254,8 +1256,8 @@ The Revolution of Dignity taught us as a civic society how to mobilise. And if w
 <<set $transcriptname to  "kharkivfesttranscript">>
 <<set $sendOn to true>>
  <<audio ":all" stop>><<audio "56.5" play>>
-/* Everyman to 1931  */
-<<set $map = setup.generateDirectionsMap({originName: "Moorfields Train Station Old hall Street", originLat: 53.40864430042216, originLong:-2.9893463897100947}, "Liverpool Parish Church")>>
+
+<<set $map = setup.generateDirectionsMap({originName: "4 Old Hall Street Liverpool L3 9RQ", originLat: 53.40822788686569, originLong:-2.992732594830228}, "Liverpool Parish Church")>>
 <<include "headerstory">>
 <main class="story" id="storyContainer" >
 <audio id="audio" >
