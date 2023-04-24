@@ -1223,7 +1223,7 @@ The Revolution of Dignity taught us as a civic society how to mobilise. And if w
 <<set $showForwards to true>>
 <<set $showCaptionsIcon to false>>
  <<audio ":all" stop>><<audio "56" play>>
-<<set $map = setup.generateDirectionsMap({originName: "4 Old Hall Street Liverpool L3 9RQ", originLat: 53.40822788686569, originLong:-2.992732594830228}, "Liverpool Parish Church")>>
+<<set $map = setup.generateViewMap({originLat: 53.407230016564334, originLong:-2.994833555821011, originName: "Liverpool Parish Church"})>>
 <div id="audio"></div>
 
 
@@ -1257,7 +1257,7 @@ The Revolution of Dignity taught us as a civic society how to mobilise. And if w
 <<set $sendOn to true>>
  <<audio ":all" stop>><<audio "56.5" play>>
 
-<<set $map = setup.generateDirectionsMap({originName: "4 Old Hall Street Liverpool L3 9RQ", originLat: 53.40822788686569, originLong:-2.992732594830228}, "Liverpool Parish Church")>>
+<<set $map = setup.generateViewMap({originLat: 53.407230016564334, originLong:-2.994833555821011, originName: "Liverpool Parish Church"})>>
 <<include "headerstory">>
 <main class="story" id="storyContainer" >
 <audio id="audio" >
