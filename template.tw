@@ -1285,7 +1285,7 @@ The Revolution of Dignity taught us as a civic society how to mobilise. And if w
   <<replace "#headerinstmount">>  
 <p class="comment">As you begin to walk press  <div class="inline-btn-wrapper">
 <<link "play">>
-  <<timed 4s>>
+  <<timed 15s>>
       <<replace "#headerinstmount">>
     <p class="comment"> Are you outside Liverpool Parish Church?  
     <a href="https://withfireandrageliverpool.com/bullet">
